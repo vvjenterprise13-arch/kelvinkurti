@@ -2,7 +2,7 @@
 $host = 'zephyr.proxy.rlwy.net';
 $port = 47728;
 $user = 'root';
-$pass = 'BwDuwWwWfQTARheGKcDxFArfbZqlXkUR';
+$pass = 'Jay@5228';
 $db   = 'railway';
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
