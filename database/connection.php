@@ -1,19 +1,14 @@
 <?php
-// Railway MySQL environment variables automatically set થાય છે
-$host = getenv('MYSQLHOST')     ?: getenv('DB_HOST') ?: 'localhost';
-$port = getenv('MYSQLPORT')     ?: getenv('DB_PORT') ?: '3306';
-$user = getenv('MYSQLUSER')     ?: getenv('DB_USER') ?: 'railway';
-$pass = getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: 'Jay@5228';
-$db   = getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'railway';
+$host = 'zephyr.proxy.rlwy.net';
+$port = 47728;
+$user = 'root';
+$pass = 'BwDuwWwWfQTARheGKcDxFArfbZqlXkUR';
+$db   = 'railway';
 
-$conn = new mysqli($host, $user, $pass, $db, (int)$port);
+$conn = new mysqli($host, $user, $pass, $db, $port);
 
 if ($conn->connect_error) {
-    error_log("DB Connection failed: " . $conn->connect_error);
-    // Production માં error show ન કરો
-    if (getenv('APP_ENV') !== 'production') {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    die("Connection failed: " . $conn->connect_error);
 }
 
 $conn->set_charset("utf8mb4");
