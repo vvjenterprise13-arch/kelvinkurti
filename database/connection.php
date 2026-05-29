@@ -3,8 +3,8 @@
 $host = getenv('MYSQLHOST')     ?: getenv('DB_HOST') ?: 'localhost';
 $port = getenv('MYSQLPORT')     ?: getenv('DB_PORT') ?: '3306';
 $user = getenv('MYSQLUSER')     ?: getenv('DB_USER') ?: 'root';
-$pass = getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: 'BwDuwWwWfQTARheGKcDxFArfbZqlXkUR';
-$db   = getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'railway';
+$pass = getenv('MYSQLPASSWORD') ?: getenv('DB_PASS') ?: 'Jay@5228';
+$db   = getenv('MYSQLDATABASE') ?: getenv('DB_NAME') ?: 'kelvin';
 
 $conn = new mysqli($host, $user, $pass, $db, (int)$port);
 
